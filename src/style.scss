@@ -1,0 +1,33 @@
+@use 'styles/normalazation' as *;
+@use 'styles/variables' as *;
+@use 'styles/utils' as *;
+
+.vb-wrapper {
+  display: flex;
+
+  background-color: #fafafa;
+
+  overflow: auto;
+}
+
+.vb-container {
+  --grid-gap: #{grid-size(1.5)};
+  --grid-columns: 12;
+  --grid-column-width: #{grid-size(20)};
+
+  height: 100%;
+  padding: $vbPadding;
+  margin: 0 auto;
+}
+
+.row-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+
+    grid-auto-rows: auto;
+
+    transform-origin: top left;
+}

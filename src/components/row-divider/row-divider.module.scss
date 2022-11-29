@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+@use '../../styles/utils' as *;
+
+$dividerHeight: grid-size(0.5);
+
+.container {
+  position: relative;
+  height: $dividerHeight;
+  width: 100%;
+
+  grid-column: 1 / 12;
+
+
+  &.isDragging, &.show {
+    background-color: #6180ec;
+  }
+}
+
+.draggableZone {
+  position: absolute;
+  left: 0;
+  top: calc(-1 * var(--grid-gap));
+
+  width: 100%;
+  height: calc(#{$dividerHeight} + var(--grid-gap) * 2);
+
+  cursor: ns-resize;
+}
+

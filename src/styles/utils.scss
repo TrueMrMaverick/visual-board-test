@@ -1,0 +1,6 @@
+$gridBase: 0.25;
+$grid: $gridBase * 1rem;
+
+@function grid-size($multiplier) {
+  @return $multiplier * $grid;
+}

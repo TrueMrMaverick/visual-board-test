@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+@use '../../styles/utils' as *;
+
+.container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  color: #91a7f2;
+  border-radius: grid-size(1);
+  border: 2px solid #91a7f2;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}

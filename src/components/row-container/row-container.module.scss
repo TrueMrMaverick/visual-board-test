@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+
+  grid-auto-rows: auto;
+
+  transform-origin: top left;
+
+  row-gap: var(--grid-gap);
+}
+
+.row {
+  position: relative;
+  display: grid;
+
+  gap: var(--grid-gap);
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(0, 1fr);
+
+  grid-template-columns: repeat(var(--grid-columns), var(--grid-column-width));
+  grid-template-rows: minmax(0, 1fr);
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
