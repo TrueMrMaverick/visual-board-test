@@ -47,7 +47,5 @@ export const parseConfig = (config: VBConfig): VBConfig => {
 
   }
 
-  console.log(config);
-
   return config;
 }
