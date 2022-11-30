@@ -100,7 +100,4 @@ const vbConfig: VBConfig = [
   }
 ];
 
-export default vbConfig;
-
-
 export const getVbConfig = (): VBConfig => JSON.parse(JSON.stringify(vbConfig));
