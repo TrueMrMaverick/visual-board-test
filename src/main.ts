@@ -30,7 +30,9 @@ createRoot(() => {
   const [vbConfig, setVbConfig] = createStore(parseConfig(getVbConfig()));
 
   vbContainer.appendChild(RowContainer({
-    vbConfig,
+    get vbConfig() {
+      return vbConfig;
+    },
     onRowSizeChange: (index, height) => setVbConfig(index, 'height', Math.max(height, rowMinHeight))
   }));
 

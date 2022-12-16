@@ -32,13 +32,19 @@ export const RowContainer: Component<HTMLDivElement, Props> = (props) => {
     for (const item of row.items) {
       if (item.id.endsWith('empty')) {
         rowElement.appendChild(EmptyItem({
-          vbItem: item,
+          get vbItem() {
+            return item;
+          },
           onClick: () => {
             console.log('empty item clicked');
           }
         }));
       } else {
-        const itemElement = VBItem({vbItem: item});
+        const itemElement = VBItem({
+          get vbItem() {
+            return item;
+          }
+        });
         rowElement.appendChild(itemElement);
       }
     }
